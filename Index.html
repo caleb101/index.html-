@@ -1,375 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- SEO Meta Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ErrandPal — Lagos’ trusted partner for errands, deliveries, cleaning, staffing, and more. We handle your daily tasks quickly, safely, and professionally.">
-  <meta name="keywords" content="ErrandPal, errands in Lagos, delivery, domestic staff, cleaning, security guards, shopping, logistics Nigeria, pickup, granite supply">
-  <meta name="author" content="ErrandPal Nigeria">
-  <title>ErrandPal — Reliable Errand & Delivery Services in Lagos</title>
-
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ErrandPal — Reliable Dispatch Rider in Lagos | Delivery & Errand Services</title>
+  <meta name="description" content="Looking for a trusted dispatch rider in Lagos? ErrandPal offers pick-up, delivery, shopping, cleaning, and personal errands across Lagos with speed and reliability." />
+  <meta name="keywords" content="dispatch rider in Lagos, Lagos delivery service, ErrandPal Nigeria, errands in Lagos, delivery app Lagos" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
-    /* === COLOR SCHEME === */
-    :root {
-      --primary-color: #0a9d45; /* Green */
-      --secondary-color: #ffffff;
-      --accent-color: #007b2f;
-      --text-color: #222;
-      --light-bg: #f8f9fa;
-      --btn-hover: #006b2a;
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family:'Poppins',sans-serif;line-height:1.6;color:#333;background:#fff;}
+    header {display:flex;justify-content:space-between;align-items:center;padding:15px 5%;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+    header img {height:55px;}
+    nav a {margin:0 12px;text-decoration:none;color:#333;font-weight:500;}
+    .hero {
+      background:url('https://images.pexels.com/photos/5483072/pexels-photo-5483072.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+      height:75vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative;
     }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: var(--secondary-color);
-      color: var(--text-color);
-      scroll-behavior: smooth;
-    }
-
-    h1, h2, h3 {
-      font-weight: 700;
-      line-height: 1.3;
-      margin: 0 0 10px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* === HEADER === */
-    header {
-      background-color: var(--secondary-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 25px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    header img {
-      height: 50px;
-    }
-
-    .header-btn {
-      background-color: var(--primary-color);
-      color: #fff;
-      padding: 10px 22px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-
-    .header-btn:hover {
-      background-color: var(--btn-hover);
-    }
-
-    /* === HERO SECTION === */
-    #hero {
-      background: linear-gradient(rgba(10,157,69,0.8), rgba(0,0,0,0.5)), 
-                  url('https://images.unsplash.com/photo-1600566753089-6bf9b9a55f77?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 120px 20px;
-    }
-
-    #hero h1 {
-      font-size: 2.8em;
-      margin-bottom: 15px;
-    }
-
-    #hero p {
-      font-size: 1.3em;
-      margin-bottom: 30px;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      background-color: var(--secondary-color);
-      color: var(--primary-color);
-      padding: 15px 30px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
-    }
-
-    .cta-btn:hover {
-      background-color: var(--btn-hover);
-      color: #fff;
-      transform: translateY(-3px);
-    }
-
-    /* === INTRODUCTION === */
-    #introduction {
-      background-color: var(--light-bg);
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    #introduction p {
-      font-size: 1.2em;
-      max-width: 850px;
-      margin: 0 auto;
-      color: #444;
-    }
-
-    /* === SERVICES === */
-    #services {
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    #services h2 {
-      color: var(--primary-color);
-      font-size: 2em;
-      margin-bottom: 40px;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .service-item {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
-      text-align: left;
-    }
-
-    .service-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .service-content {
-      padding: 20px;
-    }
-
-    .service-content h3 {
-      color: var(--primary-color);
-      margin-bottom: 8px;
-    }
-
-    .service-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
-    }
-
-    /* === WHY CHOOSE US === */
-    #why-choose-us {
-      background: var(--primary-color);
-      color: #fff;
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    .features-list {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 30px;
-    }
-
-    .features-list li {
-      background: rgba(255,255,255,0.1);
-      padding: 15px 25px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 500;
-    }
-
-    /* === CTA FOOTER === */
-    #cta-footer {
-      background-color: var(--light-bg);
-      text-align: center;
-      padding: 70px 20px;
-    }
-
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-bottom: 25px;
-    }
-
-    .contact-info a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .contact-info a:hover {
-      color: var(--btn-hover);
-    }
-
-    .closing-tag {
-      font-style: italic;
-      color: #555;
-      margin-top: 30px;
-    }
-
-    /* === RESPONSIVE === */
-    @media (max-width: 768px) {
-      #hero h1 { font-size: 2em; }
-      #hero p { font-size: 1.1em; }
-      header img { height: 40px; }
-    }
+    .hero::after {content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);}
+    .hero-content {position:relative;z-index:2;max-width:650px;}
+    .hero-content h1 {font-size:2.2rem;margin-bottom:10px;}
+    .hero-content p {font-size:1rem;margin-bottom:20px;}
+    .btn {background:#16a34a;color:#fff;padding:12px 25px;border:none;border-radius:6px;cursor:pointer;font-size:1rem;text-decoration:none;}
+    .btn:hover {background:#15803d;}
+    section {padding:60px 5%;}
+    h2 {text-align:center;margin-bottom:25px;font-size:1.6rem;color:#111;}
+    .about p {max-width:800px;margin:0 auto;text-align:center;font-size:1rem;}
+    .services {display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:25px;margin-top:30px;}
+    .service {background:#f9fafb;border-radius:12px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.05);transition:transform .3s;}
+    .service:hover {transform:translateY(-5px);}
+    .service img {width:100%;height:200px;object-fit:cover;}
+    .service h3 {font-size:1.1rem;margin:15px;text-align:center;color:#111;}
+    .service p {font-size:0.9rem;margin:0 15px 20px;text-align:center;color:#555;}
+    .contact {background:#f1f5f9;text-align:center;padding:50px 5%;}
+    .contact h2 {margin-bottom:15px;}
+    .contact p {margin-bottom:8px;font-size:1rem;}
+    footer {background:#111;color:#fff;text-align:center;padding:20px 5%;}
+    @media(max-width:768px){.hero-content h1{font-size:1.6rem;}}
   </style>
 </head>
-
 <body>
-  <!-- HEADER -->
+
   <header>
-    <img src="images/logo.png" alt="ErrandPal Logo" />
-    <a href="https://wa.me/2347026691840?text=Hello%20ErrandPal!%20I%20need%20help%20with%20an%20errand." class="header-btn">
-      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-    </a>
+    <img src="images/logo.png" alt="ErrandPal Logo">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wa.me/2347026691840" class="btn">Chat on WhatsApp</a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="container">
-      <h1>ErrandPal — Your Trusted Partner for Everyday Errands in Lagos</h1>
-      <p>We handle deliveries, errands, staffing, and cleaning — so you can focus on what truly matters.</p>
-      <a href="https://wa.me/2347026691840?text=Hello%20ErrandPal!%20I%20want%20to%20book%20a%20service." class="cta-btn">
-        <i class="fab fa-whatsapp"></i> Book a Service Now
-      </a>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Reliable Dispatch Rider in Lagos</h1>
+      <p>Fast, safe, and trustworthy delivery & errand services across Lagos — from parcels to personal runs.</p>
+      <a href="https://wa.me/2347026691840" class="btn">Book a Rider Now</a>
     </div>
   </section>
 
-  <!-- INTRODUCTION -->
-  <section id="introduction">
-    <div class="container">
-      <p>
-        Lagos can be hectic — traffic, deadlines, and countless errands. That’s why <strong>ErrandPal</strong> is here: to help you manage deliveries, cleaning, staffing, and shopping efficiently.
-        We run your errands so you can run your life.
-      </p>
-    </div>
+  <section class="about" id="about">
+    <h2>About ErrandPal</h2>
+    <p>Looking for a trusted dispatch rider in Lagos? ErrandPal is your everyday partner for errands — offering fast deliveries, market runs, and professional assistance across the city. We make life easier, one errand at a time.</p>
   </section>
 
-  <!-- SERVICES -->
   <section id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-
-      <div class="service-grid">
-        <div class="service-item">
-          <img src="https://images.unsplash.com/photo-1600566753089-6bf9b9a55f77?auto=format&fit=crop&w=600&q=60" alt="Pickup and Delivery Service">
-          <div class="service-content">
-            <h3>Pick & Drop-Off</h3>
-            <p>Fast, reliable package pickups and deliveries anywhere in Lagos.</p>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=600&q=60" alt="Distribution service">
-          <div class="service-content">
-            <h3>Distribution</h3>
-            <p>Business logistics made simple — we deliver products and documents efficiently.</p>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <img src="https://images.unsplash.com/photo-1598514983191-fd3efb7b6d09?auto=format&fit=crop&w=600&q=60" alt="Shopping Service">
-          <div class="service-content">
-            <h3>Shopping & Market Runs</h3>
-            <p>We’ll handle your groceries and market lists just the way you want them.</p>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <img src="https://images.unsplash.com/photo-1598300056483-d3923a733d3f?auto=format&fit=crop&w=600&q=60" alt="Cleaning Services">
-          <div class="service-content">
-            <h3>Cleaning Services</h3>
-            <p>Professional cleaners to keep your home and office sparkling clean.</p>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=60" alt="Domestic Staff">
-          <div class="service-content">
-            <h3>Domestic Staffing</h3>
-            <p>Hire trusted cleaners, security guards, and other trained domestic staff.</p>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <img src="https://images.unsplash.com/photo-1568145675396-cb03a4b6ce9e?auto=format&fit=crop&w=600&q=60" alt="Address verification">
-          <div class="service-content">
-            <h3>Address Verification & Vetting</h3>
-            <p>Accurate and confidential address verification for individuals and businesses.</p>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <img src="https://images.unsplash.com/photo-1602124582975-5e9df22c41a9?auto=format&fit=crop&w=600&q=60" alt="Granite Stone Supply">
-          <div class="service-content">
-            <h3>Granite Stone Supplies</h3>
-            <p>We supply and deliver granite stones and building materials across Lagos.</p>
-          </div>
-        </div>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <img src="https://images.pexels.com/photos/5588492/pexels-photo-5588492.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Pickup and Dropoff in Lagos">
+        <h3>Pick & Drop Off</h3>
+        <p>Quick and reliable parcel pick-up and drop-off across all parts of Lagos.</p>
+      </div>
+      <div class="service">
+        <img src="https://images.pexels.com/photos/9545838/pexels-photo-9545838.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Distribution Service in Lagos">
+        <h3>Distribution</h3>
+        <p>We handle bulk dispatch and last-mile distribution for SMEs and e-commerce businesses.</p>
+      </div>
+      <div class="service">
+        <img src="https://images.pexels.com/photos/11286720/pexels-photo-11286720.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Shopping and Market Runs Lagos">
+        <h3>Shopping & Market Runs</h3>
+        <p>Too busy to shop? We’ll handle your market runs, groceries, and store pickups efficiently.</p>
+      </div>
+      <div class="service">
+        <img src="https://images.pexels.com/photos/3616764/pexels-photo-3616764.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Cleaning Services Lagos">
+        <h3>Cleaning Services</h3>
+        <p>Professional cleaners for homes, offices, and apartments — available on demand.</p>
+      </div>
+      <div class="service">
+        <img src="https://images.pexels.com/photos/5320088/pexels-photo-5320088.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Address Verification Lagos">
+        <h3>Address Verification & Vetting</h3>
+        <p>We verify addresses and identities for clients and businesses, ensuring trust and accuracy.</p>
+      </div>
+      <div class="service">
+        <img src="https://images.pexels.com/photos/6153749/pexels-photo-6153749.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Personal Errands Lagos">
+        <h3>Personal Errands</h3>
+        <p>Need a trusted helper for daily runs? Our team handles personal errands discreetly and professionally.</p>
+      </div>
+      <div class="service">
+        <img src="https://images.pexels.com/photos/14028961/pexels-photo-14028961.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Granite and Stone Supplies Lagos">
+        <h3>Granite Stone Supplies</h3>
+        <p>Wholesale granite and sand supply across Lagos and surrounding regions — fast delivery guaranteed.</p>
       </div>
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
-  <section id="why-choose-us">
-    <div class="container">
-      <h2>Why Choose ErrandPal?</h2>
-      <ul class="features-list">
-        <li><i class="fas fa-check-circle"></i> Fast & Reliable across Lagos</li>
-        <li><i class="fas fa-check-circle"></i> Affordable & Transparent Rates</li>
-        <li><i class="fas fa-check-circle"></i> Trained & Verified Team</li>
-        <li><i class="fas fa-check-circle"></i> Secure, Trusted & Professional</li>
-      </ul>
-      <br>
-      <a href="https://wa.me/2347026691840?text=Hello%20ErrandPal!%20I%20want%20to%20book%20a%20service." class="cta-btn"><i class="fab fa-whatsapp"></i> Book a Service Now</a>
-    </div>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p> 07026691840 / 08126254470</p>
+    <p> calebemales@gmail.com | errandpal@icloud.com</p>
+    <p> <a href="https://errandpals.netlify.app" target="_blank">https://errandpals.netlify.app</a></p>
+    <a href="https://wa.me/2347026691840" class="btn">Chat on WhatsApp</a>
   </section>
 
-  <!-- CTA FOOTER -->
-  <section id="cta-footer">
-    <div class="container">
-      <h2>Let’s Handle Your Next Errand</h2>
-      <p>Join hundreds of Lagosians who trust ErrandPal to save time and reduce stress daily.</p>
+  <footer>
+    <p>© 2025 ErrandPal — Reliable Dispatch Rider in Lagos. All Rights Reserved.</p>
+  </footer>
 
-      <div class="contact-info">
-        <a href="tel:+2347026691840"><i class="fas fa-phone"></i> 07026691840</a>
-        <a href="mailto:calebemales@gmail.com"><i class="fas fa-envelope"></i> errandpal@icloud.com</a>
-        <a href="https://errandpals.netlify.app" target="_blank"><i class="fas fa-globe"></i> errandpal.carrd.co</a>
-      </div>
-
-      <a href="https://wa.me/2347026691840?text=Hi%20ErrandPal!%20I%20need%20your%20service." class="cta-btn">
-        <i class="fab fa-whatsapp"></i> Chat Now on WhatsApp
-      </a>
-
-      <p class="closing-tag">ErrandPal — We Run Errands, You Run Your Life.</p>
-    </div>
-  </section>
 </body>
 </html>
